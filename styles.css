@@ -64,7 +64,7 @@ img{
     margin-bottom: 10vh;
     background-color: var(--secondary-bg-color);
 }
-.wrapper{
+main{
     padding-top:48px;
     padding-right: 48px;
     padding-bottom:64px;
@@ -76,7 +76,7 @@ img{
     padding:16px;
     gap:10px;
 }
-.frame{
+section{
     width: 100%;
     max-width: 100%;
 }
@@ -99,7 +99,7 @@ li{
         margin:0%;
         width:100vw;
     }
-    .wrapper{
+    main{
         max-width:100%;
         padding-top:48px;
         padding-right: 16px;
