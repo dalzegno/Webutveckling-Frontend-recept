@@ -5,15 +5,11 @@
 
     --title-text-color: #A10000;
 
-    --bigtext: 28px;
-    --mediumtext: 24px;
-    --smalltext:16px;
+    --bigtext: 1.75rem;
+    --mediumtext: 1.5rem;
+    --smalltext:1rem;
 
     font-family: "Open Sans", sans-serif;
-}
-body, html, figure{
-  margin:0;
-  padding:0;
 }
 
 body{
@@ -23,7 +19,6 @@ body{
     font-size: var(--bigtext);
     font-weight: 700;
     letter-spacing: 0%;
-    line-height: 100%;
 }
 .redtext{
     color: var(--title-text-color);
@@ -32,13 +27,11 @@ body{
     font-size: var(--mediumtext);
     font-weight: 700;
     letter-spacing: 0%;
-    line-height: 100%;
 }
 .smalltext{
     font-size: var(--smalltext);
     font-weight: 400;
     letter-spacing: 0%;
-    line-height: 100%;
 }
 .bold{
     font-style: bold;
@@ -58,7 +51,7 @@ img{
 }
 
 main{
-    width:1280px;
+    max-width:1280px;
     margin-left: auto;
     margin-right:auto;
     margin-bottom: 10vh;
@@ -71,14 +64,17 @@ main{
     padding-left: 48px;
 }
 .description{
-    box-sizing: border-box;
     background-color: var(--description-bg-color);
-    padding:16px;
-    gap:10px;
+    padding:1rem;
 }
-section{
-    width: 100%;
-    max-width: 100%;
+:is(section) > :is(ol, ul){
+    padding:0rem 1.5rem
+}
+section, h1, h2{
+    padding: 1rem 0;
+}
+h2+p{
+    margin-bottom: 1rem;
 }
 .imageFrame{
     display: flex;
@@ -87,24 +83,19 @@ section{
 } 
 #pannkaka{
     flex: 1 1 auto;
-    width:508px;
-    height: 467px;
-}
-li{
-    line-height:normal;
+    max-width:508px;
+    max-height: 467px;
 }
 
 
 @media (max-width: 900px){
     .container{
-        margin:0%;
-        width:100vw;
-    }
-    main{
-        max-width:100%;
         padding-top:48px;
         padding-right: 16px;
         padding-bottom:64px;
         padding-left: 16px;
+    }
+    main{
+        max-width:100%;
     }
 }
