@@ -1,101 +1,127 @@
 :root {
-    --primary-bg-color: #A100004D;
-    --secondary-bg-color: #FCFCFC;
-    --description-bg-color: #EBEBEB;
+  --clr-bg-primary: oklch(0.4453 0.1827 29.23 / 30.2%);
+  --clr-bg-secondary: oklch(0.9911 0 0);
+  --clr-bg-description: oklch(0.9401 0 0);
 
-    --title-text-color: #A10000;
+  --title-text-color: oklch(0.4452 0.1827 29.23);
+  /* 
+  --clr-bg-primary: #a100004d;
+  --clr-bg-secondary: #fcfcfc;
+  --clr-bg-description: #ebebeb;
 
-    --bigtext: 1.75rem;
-    --mediumtext: 1.5rem;
-    --smalltext:1rem;
+  --title-text-color: #a10000; 
+  */
 
-    font-family: "Open Sans", sans-serif;
-}
+  --bigtext: 1.75rem;
+  --mediumtext: 1.5rem;
+  --smalltext: 1rem;
 
-body{
-    background-color: var(--primary-bg-color);
-}
-.bigtext{
-    font-size: var(--bigtext);
-    font-weight: 700;
-    letter-spacing: 0%;
-}
-.redtext{
-    color: var(--title-text-color);
-}
-.mediumtext{
-    font-size: var(--mediumtext);
-    font-weight: 700;
-    letter-spacing: 0%;
-}
-.smalltext{
-    font-size: var(--smalltext);
-    font-weight: 400;
-    letter-spacing: 0%;
-}
-.bold{
-    font-style: bold;
+  --padding-1rem: 1rem;
+  --padding-large: 3rem 3rem 4rem 3rem;
+  --padding-small: 3rem 1rem 4rem 1rem;
 }
 
-img{
-    object-fit: cover;
-    max-width:100%;
-    width:100%;
-}
-#pannkaka1 {
-    box-sizing: border-box;
-    border:1px solid var(--secondary-bg-color);
-    height: 500px;
-    width:1280px;
-    width:100%;
+body {
+  font-family: "Open Sans", sans-serif;
+
+  font-size: var(--smalltext);
+  font-weight: 400;
+  letter-spacing: 0%;
 }
 
-main{
-    max-width:1280px;
-    margin-left: auto;
-    margin-right:auto;
-    margin-bottom: 10vh;
-    background-color: var(--secondary-bg-color);
+h1 {
+  font-size: var(--bigtext);
+  font-weight: 700;
+  letter-spacing: 0%;
+
+  color: var(--title-text-color);
+  font-style: bold;
 }
-.container{
-    padding-top:48px;
-    padding-right: 48px;
-    padding-bottom:64px;
-    padding-left: 48px;
+h2 {
+  font-size: var(--mediumtext);
+  font-weight: 700;
+  letter-spacing: 0%;
+  font-style: bold;
 }
-.description{
-    background-color: var(--description-bg-color);
-    padding:1rem;
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
 }
-:is(section) > :is(ol, ul){
-    padding:0rem 1.5rem
+
+main {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10vh;
 }
-section, h1, h2{
-    padding: 1rem 0;
+
+ol,
+ul {
+  margin-left: 1.5rem;
 }
-h2+p{
-    margin-bottom: 1rem;
+
+.recipe-image {
+  border: 1px solid var(--clr-bg-secondary);
+  max-height: 500px;
+  max-width: 1280px;
 }
-.imageFrame{
-    display: flex;
-    flex-wrap: wrap;
-    gap:24px;
-} 
-#pannkaka{
-    flex: 1 1 auto;
-    max-width:508px;
+
+.flex-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  gap: 1.5rem;
+
+  * {
+    flex-basis: 100%;
+    max-width: 580px;
     max-height: 467px;
+  }
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: row;
 
-@media (max-width: 900px){
-    .container{
-        padding-top:48px;
-        padding-right: 16px;
-        padding-bottom:64px;
-        padding-left: 16px;
-    }
-    main{
-        max-width:100%;
-    }
+  justify-content: space-evenly;
+  gap: 1rem;
+  background-color: red;
+}
+
+.flex-container > * {
+  background-color: pink;
+}
+
+/* utility */
+.padding-1rem {
+  padding: var(--padding-1rem);
+}
+.padding-container {
+  padding: var(--padding-large);
+}
+.clr-bg-primary {
+  background-color: var(--clr-bg-primary);
+}
+.clr-bg-secondary {
+  background-color: var(--clr-bg-secondary);
+}
+.clr-bg-description {
+  background-color: var(--clr-bg-description);
+}
+.flow-grandchildren > * > * + * {
+  margin-top: 1em;
+}
+
+@media (max-width: 900px) {
+  .padding-container {
+    padding: var(--padding-small);
+  }
+
+  main {
+    max-width: 100%;
+  }
 }

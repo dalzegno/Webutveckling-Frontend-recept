@@ -1,67 +1,75 @@
 <!DOCTYPE html>
 <html lang="sv">
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Receptuppgift </title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
-
-</head>
-<body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receptuppgift</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="clr-bg-primary">
     <main>
-        <article>
-            <img id="pannkaka1" src="resources/1.jpg" alt="">
-            <div class="container">
-                <header>
-                    <h1 class="bigtext redtext bold">Enkelt recept på pannkakor</h1>
-                    <p class ="description smalltext">Gör traditionella tunna pannkakor med detta enkla
-                        och goda pannkaksrecept. </p>
-                </header>
+      <article class="recipe-block | flow-grandchildren | clr-bg-secondary">
+        <img class="recipe-image" src="resources/1.jpg" alt="" />
+        <div class="padding-container | flow-grandchildren">
+          <header class="">
+            <h1>Enkelt recept på pannkakor</h1>
+            <p class="padding-1rem | clr-bg-description">
+              Gör traditionella tunna pannkakor med detta enkla och goda
+              pannkaksrecept.
+            </p>
+          </header>
 
-                <section aria-labelledby="ingredients-heading">
-                    <h2 id="ingredients-heading" class="mediumtext bold"> Ingredienser</h2>
-                    <p class="subtitle smalltext">För 4 portioner</p>
-                    <ul class="smalltext">
-                        <li>2 &half; dl vetemjöl</li>
-                        <li>&half; tsk salt</li>
-                        <li>6 dl mjölk</li>
-                        <li>3 ägg</li>
-                        <li>smör (till stekning)</li>
-                        <li>sylt, bär eller frukt till servering</li>
-                    </ul>
-                </section>
+          <section aria-labelledby="ingredients-heading">
+            <h2 id="ingredients-heading">Ingredienser</h2>
+            <p>För 4 portioner</p>
+            <ul>
+              <li>2 &half; dl vetemjöl</li>
+              <li>&half; tsk salt</li>
+              <li>6 dl mjölk</li>
+              <li>3 ägg</li>
+              <li>smör (till stekning)</li>
+              <li>sylt, bär eller frukt till servering</li>
+            </ul>
+          </section>
 
-                <section aria-labelledby="how-to-heading">
-                    <h2 id="how-to-heading" class="mediumtext bold"> Så här gör du</h2>
-                    <ol class="smalltext">
-                        <li> Blanda mjöl och salt i en bunke. </li>
-                        <li> Vispa i hälften av mjölken och vispa till en slät smet. </li>
-                        <li> Vispa i resten av mjölken och äggen. </li>
-                        <li> Låt smeten vila ca 10 minuter.</li>
-                        <li> Stek tunna pannkakor i lite smör, för varje pannkaka, 
-                            i en stek- eller pannkakspanna.</li>
-                        <li> Servera med sylt, bär eller frukt</li>
-                    </ol>
-                </section>
-                
-                <figure aria-labelledby="servering-heading">
-                    <figcaption> 
-                        <h2 id="servering-heading" class="mediumtext bold">Serveringsförslag</h2>
-                    </figcaption>
-                    <div class="imageFrame">
-                        <img id="pannkaka" src="resources/2.jpg" 
-                        alt="Pannkakor serverade med hallon och grädde">
-                        <img id="pannkaka" src="resources/3.jpg" 
-                        alt="Pannkakor serverade med apelsin och honung">
-                    </div>
-                </figure>
-            </div>
-        </article>
+          <section aria-labelledby="how-to-heading">
+            <h2 id="how-to-heading">Så här gör du</h2>
+            <ol>
+              <li>Blanda mjöl och salt i en bunke.</li>
+              <li>Vispa i hälften av mjölken och vispa till en slät smet.</li>
+              <li>Vispa i resten av mjölken och äggen.</li>
+              <li>Låt smeten vila ca 10 minuter.</li>
+              <li>
+                Stek tunna pannkakor i lite smör, för varje pannkaka, i en stek-
+                eller pannkakspanna.
+              </li>
+              <li>Servera med sylt, bär eller frukt</li>
+            </ol>
+          </section>
+
+          <figure aria-labelledby="servering-heading">
+            <figcaption>
+              <h2 id="servering-heading">Serveringsförslag</h2>
+            </figcaption>
+            <figure class="flex-box">
+              <img
+                src="resources/2.jpg"
+                alt="Pannkakor serverade med hallon och grädde"
+              />
+              <img
+                src="resources/3.jpg"
+                alt="Pannkakor serverade med apelsin och honung"
+              />
+            </figure>
+          </figure>
+        </div>
+      </article>
     </main>
-</body>
-
+  </body>
 </html>
