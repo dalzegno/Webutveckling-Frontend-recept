@@ -38,27 +38,33 @@
 .recipe-gallery {
   width: 100%;
   margin-block: 3rem;
-  inline-size: 80vw;
+  inline-size: 80%;
   margin-inline: auto;
   display: grid;
-  gap: 2rem;
-  justify-content: space-evenly;
-  /* minmax gives a span with min-max values, only used in grid */
-  grid-template-columns: repeat(auto-fit, minmax(35ch, 20rem));
+  gap: 1rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(25ch, 35ch)); */
 }
 a:has(.recipe-card) {
   text-decoration: none;
 }
 .recipe-card {
-  background-color: wheat;
+  background-color: var(--clr-bg-primary);
   padding: 1rem;
   border-radius: 0.5rem;
   display: grid;
   gap: 1.5rem;
   align-content: start;
-  transition: scale 0.1s;
+  transition: box-shadow 0.1s;
 
-  width: 20rem;
+  max-width: 35rem;
+  max-height: 25rem;
+
+  overflow: clip;
+  overflow-clip-margin: content-box;
+
+  text-overflow: ellipsis;
 
   > img {
     order: -1;
@@ -71,7 +77,12 @@ a:has(.recipe-card) {
 
   &:hover {
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.303);
-    scale: 1.01;
+  }
+  > h2 {
+    transition: text-decoration 0.5s;
+    &:hover {
+      text-decoration: underline 3px firebrick;
+    }
   }
 }
 

@@ -1,4 +1,30 @@
+:root {
+  --clr-bg-primary: oklch(0.4453 0.1827 29.23 / 30.2%);
+  --clr-bg-secondary: oklch(0.9911 0 0);
+  --clr-bg-description: oklch(0.9401 0 0);
+
+  --title-text-color: #a10000;
+  /* 
+  --clr-bg-primary: #a100004d;
+  --clr-bg-secondary: #fcfcfc;
+  --clr-bg-description: #ebebeb;
+
+  --title-text-color: #a10000; 
+  */
+
+  --bigtext: 1.75rem;
+  --mediumtext: 1.5rem;
+  --smalltext: 1rem;
+
+  --padding-1rem: 1rem;
+  --padding-large: 3rem 3rem 4rem 3rem;
+  --padding-small: 3rem 1rem 4rem 1rem;
+
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
 body {
+  background-color: var(--clr-bg-primary);
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
@@ -43,14 +69,18 @@ body {
   padding: 0.5rem;
 }
 .header > a:last-child {
-  border-radius: 1rem;
+  border-radius: 0.2rem;
   margin-inline: 0.2em;
   margin-block: 0.2rem;
   padding: 0.2rem;
+  background-color: var(--clr-bg-secondary);
+  color: black;
+  text-decoration: none;
 }
 main {
   grid-area: main;
-  width: 100%;
+  width: 80%;
+  background-color: var(--clr-bg-secondary);
 }
 footer {
   grid-area: footer;
@@ -63,5 +93,8 @@ footer {
     nav {
       align-self: stretch;
     }
+  }
+  main {
+    width: 100vw;
   }
 }

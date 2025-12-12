@@ -1,29 +1,3 @@
-:root {
-  --clr-bg-primary: oklch(0.4453 0.1827 29.23 / 30.2%);
-  --clr-bg-secondary: oklch(0.9911 0 0);
-  --clr-bg-description: oklch(0.9401 0 0);
-
-  --title-text-color: #a10000;
-  /* 
-  --clr-bg-primary: #a100004d;
-  --clr-bg-secondary: #fcfcfc;
-  --clr-bg-description: #ebebeb;
-
-  --title-text-color: #a10000; 
-  */
-
-  --bigtext: 1.75rem;
-  --mediumtext: 1.5rem;
-  --smalltext: 1rem;
-
-  --padding-1rem: 1rem;
-  --padding-large: 3rem 3rem 4rem 3rem;
-  --padding-small: 3rem 1rem 4rem 1rem;
-
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
 
@@ -66,10 +40,7 @@ ul {
 .recipe-image {
   border: 1px solid var(--clr-bg-secondary);
   max-height: 500px;
-}
-.recipe-block {
-  width: 80%;
-  justify-self: center;
+  width: 100%;
 }
 
 .flex-box {
@@ -112,6 +83,9 @@ ul {
 }
 .align-center {
   align-items: center;
+}
+.margin-auto {
+  margin: auto;
 }
 
 @media (max-width: 900px) {
