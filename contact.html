@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="layout.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="contact.css" />
   </head>
   <body class="clr-bg-primary">
     <header class="header">
@@ -38,9 +39,9 @@
 
       <nav class="header__nav">
         <ul role="list" class="flex-container">
-          <li><a href="#recipes">Alla recept</a></li>
+          <li><a href="/">Alla recept</a></li>
           <li><a href="/pannkaksrecept.html">Om oss</a></li>
-          <li><a href="/contact.html">Kontakt</a></li>
+          <li><a href="">Kontakt</a></li>
         </ul>
       </nav>
 
@@ -48,99 +49,154 @@
     </header>
 
     <main id="main">
-      <div class="hero-image">
-        <div class="hero-text">
-          <p>Pannkakor</p>
-          <p>Pannkakor</p>
-          <p>Pannkakor</p>
-        </div>
-      </div>
-      <section id="recipes" class="recipe-gallery">
-        <a href="/pannkaksrecept.html">
-          <div class="recipe-card">
-            <h2>Enkelt recept på pannkakor</h2>
-            <img src="resources/2.jpg" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Laboriosam, harum laborum? Quia, obcaecati. Quaerat dolores ipsa
-              reiciendis unde recusandae dolorem ducimus at voluptatibus ea nisi
-              commodi tenetur, labore rem alias?
-            </p>
+      <button
+        onclick="document.getElementById('contactModal').showModal()"
+        class="padding-1rem | border-rds-tiny |"
+      >
+        Kontakta oss
+      </button>
+      <button
+        onclick="document.getElementById('reviewModal').showModal()"
+        class="padding-1rem | border-rds-tiny |"
+      >
+        Skriv en recension
+      </button>
+
+      <!-- Kontakt-modal -->
+      <dialog id="contactModal">
+        <button
+          type="button"
+          class="padding-tiny | margin-tiny | justify-self-end"
+          onclick="document.getElementById('contactModal').close()"
+          aria-label="Stäng"
+        >
+          x
+        </button>
+        <form action="#" method="POST" class="form">
+          <h2>Kontakta oss</h2>
+          <div class="form-group">
+            <label for="name">DITT NAMN</label>
+            <input type="text" id="name" autocomplete="name" required />
           </div>
-        </a>
-        <a href="/pannkaksrecept.html">
-          <div class="recipe-card">
-            <h2>Enkelt recept på pannkakor</h2>
-            <img src="resources/2.jpg" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Laboriosam, harum laborum? Quia, obcaecati. Quaerat dolores ipsa
-              reiciendis unde recusandae dolorem ducimus at voluptatibus ea nisi
-              commodi tenetur, labore rem alias?
-            </p>
+          <div class="form-group">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" autocomplete="email" required />
           </div>
-        </a>
-        <a href="/pannkaksrecept.html">
-          <div class="recipe-card">
-            <h2>Enkelt recept på pannkakor</h2>
-            <img src="resources/2.jpg" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Laboriosam, harum laborum? Quia, obcaecati. Quaerat dolores ipsa
-              reiciendis unde recusandae dolorem ducimus at voluptatibus ea nisi
-              commodi tenetur, labore rem alias?
-            </p>
+          <div class="form-group">
+            <label for="errand">Ärende</label>
+            <select id="errand" required>
+              <option value="">---</option>
+              <option value="Komplimang">Komplimang</option>
+              <option value="Klagomål">Klagomål</option>
+              <option value="Annat">Annat</option>
+            </select>
           </div>
-        </a>
-        <a href="/pannkaksrecept.html">
-          <div class="recipe-card">
-            <h2>Enkelt recept på pannkakor</h2>
-            <img src="resources/2.jpg" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Laboriosam, harum laborum? Quia, obcaecati. Quaerat dolores ipsa
-              reiciendis unde recusandae dolorem ducimus at voluptatibus ea nisi
-              commodi tenetur, labore rem alias?
-            </p>
+          <div class="form-group">
+            <label for="errandText">Ärendet gäller:</label>
+            <textarea name="errandText" id="errandText" rows="7" required>
+            </textarea>
           </div>
-        </a>
-        <a href="/pannkaksrecept.html">
-          <div class="recipe-card">
-            <h2>Enkelt recept på pannkakor</h2>
-            <img src="resources/2.jpg" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Laboriosam, harum laborum? Quia, obcaecati. Quaerat dolores ipsa
-              reiciendis unde recusandae dolorem ducimus at voluptatibus ea nisi
-              commodi tenetur, labore rem alias?
-            </p>
+
+          <button type="submit">SKICKA</button>
+        </form>
+      </dialog>
+
+      <!-- Recension-modal  -->
+      <dialog id="reviewModal">
+        <button
+          type="button"
+          class="padding-tiny | margin-tiny | justify-self-end"
+          onclick="document.getElementById('reviewModal').close()"
+          aria-label="Stäng"
+        >
+          x
+        </button>
+        <form action="#" method="POST" class="form">
+          <h2>Recension</h2>
+          <div class="form-group">
+            <label for="reviewName">DITT NAMN</label>
+            <input type="text" id="reviewName" autocomplete="name" required />
           </div>
-        </a>
-        <a href="/pannkaksrecept.html">
-          <div class="recipe-card">
-            <h2>Enkelt recept på pannkakor</h2>
-            <img src="resources/2.jpg" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Laboriosam, harum laborum? Quia, obcaecati. Quaerat dolores ipsa
-              reiciendis unde recusandae dolorem ducimus at voluptatibus ea nisi
-              commodi tenetur, labore rem alias?
-            </p>
+          <div class="form-group">
+            <label for="reviewEmail">EMAIL</label>
+            <input
+              type="email"
+              id="reviewEmail"
+              autocomplete="email"
+              required
+            />
           </div>
-        </a>
-        <a href="/pannkaksrecept.html">
-          <div class="recipe-card">
-            <h2>Enkelt recept på pannkakor</h2>
-            <img src="resources/2.jpg" />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Laboriosam, harum laborum? Quia, obcaecati. Quaerat dolores ipsa
-              reiciendis unde recusandae dolorem ducimus at voluptatibus ea nisi
-              commodi tenetur, labore rem alias?
-            </p>
+          <div class="form-group">
+            <label for="recipe">VÄLJ RECEPT</label>
+            <select id="recipe" required>
+              <option value="">---</option>
+              <option value="Enkelt recept på pannkakor">
+                Enkelt recept på pannkakor
+              </option>
+              <option value="Annat">Annat recept</option>
+            </select>
           </div>
-        </a>
-      </section>
+          <div class="form-group">
+            <label for="reviewRating">Betyg</label>
+            <input
+              type="range"
+              id="reviewRating"
+              name="reviewRating"
+              min="0"
+              max="10"
+              step="1"
+              list="rating-markers"
+            />
+            <datalist id="rating-markers">
+              <option value="0" label="0">0</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+            </datalist>
+          </div>
+          <div class="form-group">
+            <fieldset>
+              <legend>Skulle du rekommendera receptet?</legend>
+              <div>
+                <input
+                  name="recommend_option"
+                  type="radio"
+                  id="recommend-yes"
+                  value="yes"
+                />
+                <label for="recommend-yes">Ja</label>
+              </div>
+              <div>
+                <input
+                  name="recommend_option"
+                  type="radio"
+                  id="recommend-no"
+                  value="no"
+                />
+                <label for="recommend-no">Nej</label>
+              </div>
+              <div>
+                <input
+                  name="recommend_option"
+                  type="radio"
+                  id="recommend-maybe"
+                  value="maybe"
+                />
+                <label for="recommend-maybe">Kanske</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="form-group">
+            <label for="reviewText">Recension</label>
+            <textarea
+              name="reviewText"
+              id="reviewText"
+              rows="7"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">SKICKA</button>
+        </form>
+      </dialog>
     </main>
     <a href="#main"><footer>hello</footer></a>
   </body>

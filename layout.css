@@ -1,28 +1,3 @@
-:root {
-  --clr-bg-primary: oklch(0.4453 0.1827 29.23 / 30.2%);
-  --clr-bg-secondary: oklch(0.9911 0 0);
-  --clr-bg-description: oklch(0.9401 0 0);
-
-  --title-text-color: #a10000;
-  /* 
-  --clr-bg-primary: #a100004d;
-  --clr-bg-secondary: #fcfcfc;
-  --clr-bg-description: #ebebeb;
-
-  --title-text-color: #a10000; 
-  */
-
-  --bigtext: 1.75rem;
-  --mediumtext: 1.5rem;
-  --smalltext: 1rem;
-
-  --padding-1rem: 1rem;
-  --padding-large: 3rem 3rem 4rem 3rem;
-  --padding-small: 3rem 1rem 4rem 1rem;
-
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-}
 body {
   background-color: var(--clr-bg-primary);
   min-height: 100vh;
@@ -38,7 +13,7 @@ body {
   position: sticky;
   top: 0;
   grid-area: header;
-  background-color: pink;
+  background-color: hsl(from var(--clr-bg-primary) h s 67);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -47,7 +22,6 @@ body {
   z-index: 9999;
 }
 .header > nav {
-  background-color: wheat;
   flex-grow: 0.5;
   display: flex;
   align-self: stretch;
